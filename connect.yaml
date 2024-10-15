@@ -1,9 +1,7 @@
 deployAs:
   - name: service
     applicationType: service
-    endpoints:
-      - /service
-      - /service1
+    endpoint: /service
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
       preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
